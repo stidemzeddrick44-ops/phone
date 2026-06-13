@@ -1,3 +1,23 @@
-requests
-python-dotenv
-textblob⁠
+⁠import os
+import requests
+from textblob import TextBlob
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file
+load_dotenv()
+
+def main():
+    print("Dependencies loaded successfully!")
+    
+    # Example usage of your libraries
+    # 1. requests: You will use this to fetch data from APIs
+    # 2. textblob: You will use this to analyze text sentiment
+    # 3. python-dotenv: This keeps your API keys secure
+    
+    example_text = "I love coding on my iPhone!"
+    analysis = TextBlob(example_text)
+    
+    print(f"Sentiment Analysis: {analysis.sentiment}")
+
+if __name__ == "__main__":
+    main()
